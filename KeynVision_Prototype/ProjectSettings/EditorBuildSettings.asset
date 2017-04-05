@@ -9,5 +9,7 @@ EditorBuildSettings:
     path: Assets/test01.unity
   - enabled: 0
     path: Assets/test02.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/test03.unity
+  - enabled: 1
+    path: Assets/test04_CameraViewChanges.unity
