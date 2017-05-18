@@ -11,5 +11,21 @@ EditorBuildSettings:
     path: Assets/test02.unity
   - enabled: 0
     path: Assets/test03.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/test04_CameraViewChanges.unity
+  - enabled: 0
+    path: Assets/test05_CameraViewChanges.unity
+  - enabled: 0
+    path: Assets/test04_101ref.unity
+  - enabled: 0
+    path: Assets/test05_211ref.unity
+  - enabled: 0
+    path: Assets/bulletFUn.unity
+  - enabled: 0
+    path: Assets/KeynVision_Prototype_V1.unity
+  - enabled: 0
+    path: Assets/Scenes/KeynVision_Prototype_V2.unity
+  - enabled: 0
+    path: Assets/Scenes/KeynVision_Prototype_V1.unity
+  - enabled: 1
+    path: Assets/Scenes/KeynVision_Prototype_V3.unity

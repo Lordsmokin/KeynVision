@@ -21,7 +21,7 @@ public class fallingNotes_Mover : MonoBehaviour {
 		timeToSpawn -= Time.deltaTime;
 
 		if (timeToSpawn <= 0f) {
-			Instantiate (note, new Vector3 (myKey.position.x, 0f, spawnZ), Quaternion.identity);
+			Instantiate (note, new Vector3 (myKey.position.x, myKey.position.y + 0.025f, spawnZ), Quaternion.identity);
 			timeToSpawn = spawnTime;
 		}
 	}	
