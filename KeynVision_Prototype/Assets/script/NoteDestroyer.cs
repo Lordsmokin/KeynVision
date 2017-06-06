@@ -11,7 +11,7 @@ public class NoteDestroyer : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag ("Destroy")) 
 		{
-			other.gameObject.SetActive (false);
+			Destroy(other.gameObject);
 		}
 	}
 }

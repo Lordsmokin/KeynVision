@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f80f9dbd1ebe644ab98cfcb1441488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteNotes: {fileID: 1120937722973426, guid: b733b7305fbe16546aa95296ea1201eb, type: 2}
+  whiteNotes: {fileID: 1411619253033756, guid: b733b7305fbe16546aa95296ea1201eb, type: 2}
   keyFlyDirection: {fileID: 0}
   spawnInterval: 8
   timeToSpawn: 6
