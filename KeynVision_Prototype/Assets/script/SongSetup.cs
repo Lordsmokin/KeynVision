@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SongSetup : MonoBehaviour {
+	public UnityEvent NotesSetupCreator;
 
 	public GameObject FlyDirections;
 
+	public GameObject RSpawner;
 	public GameObject CSpawner;
 	public GameObject DSpawner;
 	public GameObject ESpawner;
@@ -16,33 +19,42 @@ public class SongSetup : MonoBehaviour {
 	public GameObject C1Spawner;
 
 	void Start () {
-		// Create the octave spawners:
-		//CreateOctave();
-		CreateOther();
+		// Create the correct notes setup:
+		NotesSetupCreator.Invoke();
 	}
 
-	void CreateOctave() {
-		CreateNote ("C", 0f, 8f);
-		CreateNote ("D", 1f, 8f);
-		CreateNote ("E", 2f, 8f);
-		CreateNote ("F", 3f, 8f);
-		CreateNote ("G", 4f, 8f);
-		CreateNote ("A", 5f, 8f);
-		CreateNote ("B", 6f, 8f);
-		CreateNote ("C1", 7f, 8f);
+	public void CreateOctave() {
+		CreateNote ("R", 0f, 1f);
+		CreateNote ("C", 8f, 65f);
+		CreateNote ("D", 12f, 65f);
+		CreateNote ("E", 16f, 65f);
+		CreateNote ("F", 20f, 65f);
+		CreateNote ("G", 24f, 65f);
+		CreateNote ("A", 28f, 65f);
+		CreateNote ("B", 32f, 65f);
+		CreateNote ("C1",36f, 65f);
+		CreateNote ("B", 40f, 65f);
+		CreateNote ("A", 44f, 65f);
+		CreateNote ("G", 48f, 65f);
+		CreateNote ("F", 52f, 65f);
+		CreateNote ("E", 56f, 65f);
+		CreateNote ("D", 60f, 65f);
+		CreateNote ("C", 64f, 65f);
+
 	}
 
-	void CreateOther() {
-		CreateNote ("C", 0f, 8f);
-		CreateNote ("E", 1f, 8f);
-		CreateNote ("G", 2f, 8f);
-		CreateNote ("E", 3f, 8f);
-		CreateNote ("C", 4f, 8f);
-		CreateNote ("B", 5f, 8f);
-		CreateNote ("A", 6f, 8f);
-		CreateNote ("C", 7f, 8f);
+	public void CreateArpeggio() {
+		CreateNote ("R", 0f, 1f);
+		CreateNote ("C", 8f, 33f);
+		CreateNote ("E", 12f, 33f);
+		CreateNote ("G", 16f, 33f);
+		CreateNote ("C1",20f, 33f);
+		CreateNote ("G", 24f, 33f);
+		CreateNote ("E", 28f, 33f);
+		CreateNote ("C", 32f, 33f);
 	}
 
+	// Notes are positioned at the end of their holding time
 	void CreateNote(string note, float timeToStart, float interval) {
 		GameObject spawnerPrefab = GetSpawner (note);
 		Transform spawnParent = GetSpawnParent (note);
@@ -71,6 +83,8 @@ public class SongSetup : MonoBehaviour {
 			return BSpawner;
 		} else if (note == "C1") {
 			return C1Spawner;
+		} else if (note == "R") {
+			return RSpawner;
 		}
 		return null;
 	}
